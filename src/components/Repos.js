@@ -12,7 +12,6 @@ const Repos = () => {
   const [currentpage, setCurrentPage] = useState(4);
 
   console.log(repos.id);
-  // page numbers
   const pageNumbers = [1, 2, 3];
 
   useEffect(() => {
