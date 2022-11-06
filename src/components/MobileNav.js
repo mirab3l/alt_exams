@@ -13,6 +13,9 @@ const MobileNav = () => {
           <Link to="Repos">Repositories</Link>
         </li>
         <li>
+          <Link to="Profile">Profile</Link>
+        </li>
+        <li>
           <Link to="*">Error</Link>
         </li>
       </ul>
