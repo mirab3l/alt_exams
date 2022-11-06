@@ -33,7 +33,10 @@ const Profile = () => {
   console.log(users);
   return (
     <div>
+      <div className="navigation">
+
       <Nav />
+      </div>
       <div className="heading">
         <Link to="/Repos" aria-label="go back">
           <FaArrowLeft />

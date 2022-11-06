@@ -37,7 +37,10 @@ const Repos = () => {
 
   return (
     <div>
+      <div className="navigation">
+
       <Nav />
+      </div>
       <div className="heading">
         <Link to="/" aria-label="go back">
           <FaArrowLeft />

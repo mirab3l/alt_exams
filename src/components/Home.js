@@ -6,7 +6,7 @@ import "./Styling/Home.css";
 const Home = () => {
   
   return (
-    <div className="home">
+    <div className="navigation">
         <Nav />
         <div>
       <h1 className="homepage">Welcome to my github repos</h1>
