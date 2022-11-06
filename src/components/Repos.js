@@ -6,15 +6,14 @@ import { format } from "date-fns";
 import Nav from "./Nav";
 import "./Styling/Repos.css";
 
-
 const Repos = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentpage, setCurrentPage] = useState(4);
 
-  console.log(repos.id)
+  console.log(repos.id);
   // page numbers
-  const pageNumbers = [1, 2, 3]
+  const pageNumbers = [1, 2, 3];
 
   useEffect(() => {
     async function onLoad() {
@@ -35,36 +34,13 @@ const Repos = () => {
     onLoad();
   }, [currentpage]);
 
-  // useEffect(() => {
-  //   const fetchrepos = async () => {
-  //     setLoading(true);
-  //     const repos = await octokit
-  //       .request(`GET /users/{owner}/repos?per_page=${currentpage}`, {
-  //         owner: "mirab3l",
-  //       })
-  //       .then((repos) => {
-  //         setRepos(repos.data);
-  //       })
-  //       .catch((error) => {
-  //         console.log(error);
-  //       })
-  //       .finally(() => {
-  //         setLoading(false);
-  //       });
-  //   }
-  //   fetchrepos();
-  // },[currentpage])
-
   console.log(repos);
-// Get current post
-
 
   return (
     <div>
       <Nav />
       <div className="heading">
-      <Link to="/" aria-label="go back">
-
+        <Link to="/" aria-label="go back">
           <FaArrowLeft />
         </Link>
         <h3 className="header">Github repositories</h3>
@@ -74,7 +50,7 @@ const Repos = () => {
         {loading ? (
           <p>Loading...</p>
         ) : (
-         repos.map((repo) => {
+          repos.map((repo) => {
             return (
               <div className="main">
                 <div key={repo.id} className="details">
@@ -83,11 +59,14 @@ const Repos = () => {
                 </div>
                 <div className="time">
                   <p>
-                  <i>* This repository was created{" "} </i>
+                    <i>* This repository was created </i>
                     {format(new Date(repo.created_at), "dd MMMM yyyy")}
                   </p>
                   <button className="view">
-                    <Link to={`/details/${repo.id}`} className="repo-btn"> View repo</Link>
+                    <Link to={`/details/${repo.id}`} className="repo-btn">
+                      {" "}
+                      View repo
+                    </Link>
                   </button>
                 </div>
               </div>
@@ -95,7 +74,7 @@ const Repos = () => {
           })
         )}
       </div>
-  
+
       <div className="pages">
         <button
           onClick={() => {
