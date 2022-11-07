@@ -29,6 +29,7 @@ div.navLinksContainer {
   nav {
     justify-content: flex-end;
     align-items: flex-end;
+    text-align: center;
   }
   div.menu {
     display: block;

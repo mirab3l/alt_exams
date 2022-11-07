@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { octokit } from "../utils/octokit";
-import {useParams }  from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import Nav from "./Nav";
@@ -29,29 +29,32 @@ const Details = () => {
     }
     onLoad();
   }, []);
-  const NewArray = repos.find(repo => repo.id === Number(repositoryId))
-  console.log(NewArray)
+  const NewArray = repos.find((repo) => repo.id === Number(repositoryId));
+  console.log(NewArray);
   return (
-    <div>
-      <Nav />
+    <div className="deets">
+      <div className="navigation">
+
+        <Nav />
+      </div>
       <div className="Details-info">
-      <Link to="/Repos" aria-label="go back">
+        <Link to="/Repos" aria-label="go back">
           <FaArrowLeft />
         </Link>
-        {/* <h1 className="Heading">This is the details page</h1> */}
       </div>
       <div className="main">
         {loading ? (
           <p>Loading...</p>
         ) : (
-          <div  className="repo-details">
-          <h1>{NewArray.name}</h1>
-          <h4><Link>URL: {NewArray.url}</Link></h4>
-          <h4>Created at:{NewArray.created_at}</h4>
-          <h4>Pushed at:{NewArray.pushed_at}</h4>
-
-            </div>
-          )}
+          <div className="repo-details">
+            <h1>{NewArray.name}</h1>
+            <h4>
+              <Link>URL: {NewArray.url}</Link>
+            </h4>
+            <h4>Created at:{NewArray.created_at}</h4>
+            <h4>Pushed at:{NewArray.pushed_at}</h4>
+          </div>
+        )}
       </div>
     </div>
   );
