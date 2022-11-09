@@ -38,8 +38,7 @@ const Repos = () => {
   return (
     <div>
       <div className="navigation">
-
-      <Nav />
+        <Nav />
       </div>
       <div className="heading">
         <Link to="/" aria-label="go back">
@@ -61,8 +60,8 @@ const Repos = () => {
                 </div>
                 <div className="time">
                   <p>
-                    <i>* This repository was created </i>
-                    {format(new Date(repo.created_at), "dd MMMM yyyy")}
+                    <i>* This repository was created on </i>
+                     {format(new Date(repo.created_at), "dd MMMM yyyy")}
                   </p>
                   <button className="view">
                     <Link to={`/details/${repo.id}`} className="repo-btn">

@@ -10,10 +10,10 @@ const MobileNav = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="Repos">Repositories</Link>
+          <Link to="/repos">Repositories</Link>
         </li>
         <li>
-          <Link to="Profile">Profile</Link>
+          <Link to="/profile">Profile</Link>
         </li>
         <li>
           <Link to="*">Error</Link>

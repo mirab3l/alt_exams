@@ -48,7 +48,7 @@ const Details = () => {
           <div className="repo-details">
             <h1>{NewArray.name}</h1>
             <h4>
-              <Link>URL: {NewArray.url}</Link>
+              <Link href="">URL: {NewArray.url}</Link>
             </h4>
             <h4>Created at:{NewArray.created_at}</h4>
             <h4>Pushed at:{NewArray.pushed_at}</h4>

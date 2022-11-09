@@ -48,12 +48,12 @@ const Profile = () => {
       ) : (
         <div className="profile">
           <img src={users.avatar_url} alt="github profile" className="image" />
-          <h2>{users.name}</h2>
-          <h2>{users.login}</h2>
+          <h3>{users.name}</h3>
+          <h3>{users.login}</h3>
           <h3>
             <FaUser /> {users.followers} Follower • {users.following} Following
           </h3>
-          <a href="https://github.com/mirab3l">https://github.com/mirab3l</a>
+          <a href="https://github.com/mirab3l" className="link">https://github.com/mirab3l</a>
         </div>
       )}
     </div>

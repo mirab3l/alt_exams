@@ -50,6 +50,7 @@ a {
   border-radius: 0.2rem;
   margin-top: 2em;
   margin-right: 0.5em;
+  cursor: pointer;
 }
 .pages{
   margin-right: auto;
