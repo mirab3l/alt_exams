@@ -9,7 +9,7 @@ import "./Styling/Repos.css";
 const Repos = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [currentpage, setCurrentPage] = useState(4);
+  const [currentpage, setCurrentPage] = useState(1);
 
   console.log(repos.id);
   const pageNumbers = [1, 2, 3];
@@ -17,7 +17,7 @@ const Repos = () => {
   useEffect(() => {
     async function onLoad() {
       const repos = await octokit
-        .request(`GET /users/{owner}/repos?per_page=${currentpage}`, {
+        .request(`GET /users/{owner}/repos?per_page=2&page=${currentpage}`, {
           owner: "mirab3l",
         })
         .then((repos) => {
@@ -104,7 +104,7 @@ const Repos = () => {
             setCurrentPage(currentpage + 1);
           }}
           className="pagination"
-          disabled={currentpage === 2}
+          disabled={currentpage === 3}
         >
           Next
         </button>

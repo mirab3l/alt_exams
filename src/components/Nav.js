@@ -21,10 +21,10 @@ const Nav = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="repos">Repositories</Link>
+              <Link to="/repos">Repositories</Link>
             </li>
             <li>
-              <Link to="Profile">Profile</Link>
+              <Link to="/Profile">Profile</Link>
             </li>
             <li>
               <Link to="*">Error</Link>

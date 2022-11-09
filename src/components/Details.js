@@ -34,7 +34,6 @@ const Details = () => {
   return (
     <div className="deets">
       <div className="navigation">
-
         <Nav />
       </div>
       <div className="Details-info">
